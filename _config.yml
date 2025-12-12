@@ -1,0 +1,94 @@
+# Site settings
+title: Habib Irani
+position: PhD Candidate
+affiliation: Texas State University
+affiliation_link: https://www.txstate.edu/
+affiliation_logo: ./assets/images/badges/txstate.png
+contact_note: Feel free to reach out!
+
+# Profile
+profile_pic: ./assets/images/photos/portrait.jpg
+profile_pic_alt: "Habib Irani"
+
+# Contact & Social
+email: habibirani@txstate.edu
+github_username: habib-irani
+google_scholar: YOUR_GOOGLE_SCHOLAR_ID
+orcid: YOUR_ORCID_ID
+twitter_username: # Add if you have Twitter
+linkedin_username: # Add if you have LinkedIn
+
+# Navigation
+navigation:
+  - title: Home
+    url: /
+  - title: Publications
+    url: /publications
+  - title: CV
+    url: ./assets/files/CV.pdf
+
+# Short description (appears on homepage)
+short_bio: >
+  I am a PhD candidate in Computer Science at Texas State University, working under the supervision of 
+  Dr. Vangelis Metsis at the Intelligent Multimodal Computing and Sensing (IMICS) Laboratory. My research 
+  focuses on developing innovative machine learning methods for time series analysis, with particular emphasis 
+  on integrating Bayesian approaches with deep learning architectures and designing novel positional encoding 
+  techniques for temporal data.
+
+# Long description (appears below short bio)
+long_bio: >
+  My work bridges theoretical advances in machine learning with practical applications in smart health, 
+  computer vision, and large language models. I am passionate about creating robust, efficient, and 
+  interpretable AI systems that address real-world challenges.
+
+# Education
+show_education: true
+
+# News
+show_news: true
+news_limit: 5
+news_years: [2025, 2024, 2023, 2022]
+
+# Publications
+show_publications: true
+publications_limit: 5
+
+# Footer
+footer_text: >
+  Last updated: December 2024
+
+# Build settings
+baseurl: "" # For GitHub Pages user site, this should be empty
+url: "https://habib-irani.github.io"
+
+# Jekyll settings
+theme: minima
+plugins:
+  - jekyll-feed
+
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
+# Collections
+collections:
+  news:
+    output: true
+    permalink: /news/:path/
+  publications:
+    output: true
+    permalink: /publications/:path/
+  
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "news"
+    values:
+      layout: "news"
+  - scope:
+      path: ""
+      type: "publications"
+    values:
+      layout: "publication"
