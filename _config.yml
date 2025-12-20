@@ -1,94 +1,79 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely need to edit after that.
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'jekyll serve'. If you change this file, please restart the server process.
+
 # Site settings
 title: Habib Irani
-position: PhD Candidate
-affiliation: Texas State University
-affiliation_link: https://www.txstate.edu/
-affiliation_logo: ./assets/images/badges/txstate.png
-contact_note: Feel free to reach out!
-
-# Profile
-profile_pic: ./assets/images/photos/portrait.jpg
-profile_pic_alt: "Habib Irani"
-
-# Contact & Social
+name: Habib Irani
 email: habibirani@txstate.edu
-github_username: habib-irani
-google_scholar: YOUR_GOOGLE_SCHOLAR_ID
-orcid: YOUR_ORCID_ID
-twitter_username: # Add if you have Twitter
-linkedin_username: # Add if you have LinkedIn
+description: >
+  PhD Candidate in Computer Science at Texas State University
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://habibirani.github.io" # the base hostname & protocol for your site
 
-# Navigation
-navigation:
-  - title: Home
-    url: /
-  - title: Publications
-    url: /publications
-  - title: CV
-    url: ./assets/files/CV.pdf
+# User settings
+username: Habib Irani
+user_description: PhD Candidate in Computer Science
+user_title: PhD Candidate
+email: habibirani@txstate.edu
+# twitter_username: 
+github_username: habibirani
+# gplus_username:  
 
-# Short description (appears on homepage)
-short_bio: >
-  I am a PhD candidate in Computer Science at Texas State University, working under the supervision of 
-  Dr. Vangelis Metsis at the Intelligent Multimodal Computing and Sensing (IMICS) Laboratory. My research 
-  focuses on developing innovative machine learning methods for time series analysis, with particular emphasis 
-  on integrating Bayesian approaches with deep learning architectures and designing novel positional encoding 
-  techniques for temporal data.
+# Google Scholar ID (get from your scholar URL)
+scholar_userid: https://scholar.google.com/citations?view_op=list_works&hl=en&hl=en&user=rfwgLzcAAAAJ
 
-# Long description (appears below short bio)
-long_bio: >
-  My work bridges theoretical advances in machine learning with practical applications in smart health, 
-  computer vision, and large language models. I am passionate about creating robust, efficient, and 
-  interpretable AI systems that address real-world challenges.
-
-# Education
-show_education: true
-
-# News
-show_news: true
-news_limit: 5
-news_years: [2025, 2024, 2023, 2022]
-
-# Publications
-show_publications: true
-publications_limit: 5
-
-# Footer
-footer_text: >
-  Last updated: December 2024
+# ORCID ID
+orcid_id: https://orcid.org/0009-0003-5035-9257
 
 # Build settings
-baseurl: "" # For GitHub Pages user site, this should be empty
-url: "https://habib-irani.github.io"
-
-# Jekyll settings
-theme: minima
-plugins:
-  - jekyll-feed
-
 markdown: kramdown
-kramdown:
-  input: GFM
-  syntax_highlighter: rouge
+highlighter: rouge
+permalink: /:year/:month/:day/:title/
+
+# Pagination
+paginate: 5
+paginate_path: "/blog/page:num/"
+
+# Exclude these files from production site
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - LICENSE
+  - README.md
+  - CNAME
+  - vendor
 
 # Collections
 collections:
-  news:
-    output: true
-    permalink: /news/:path/
   publications:
     output: true
     permalink: /publications/:path/
-  
+  news:
+    output: true
+    permalink: /news/:path/
+
 # Defaults
 defaults:
-  - scope:
-      path: ""
-      type: "news"
-    values:
-      layout: "news"
   - scope:
       path: ""
       type: "publications"
     values:
       layout: "publication"
+  - scope:
+      path: ""
+      type: "news"
+    values:
+      layout: "news"
+
+# Plugin settings
+plugins:
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-feed
+
+# Theme
+# remote_theme: jekyll/minima
